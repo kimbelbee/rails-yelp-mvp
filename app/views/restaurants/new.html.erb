@@ -1,0 +1,14 @@
+<h1>You want to add a new Greek-Fusion-Restaurant? Great: </h1>
+<h2>Give us the </h2>
+<%= form_for(@restaurant) do |f|%>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<br>
+<%= f.label :address %>
+<%= f.text_field :address %>
+<br>
+<%= f.label :category %>
+<%= f.text_field :category %>
+<br>
+<%= f.submit %>
+<% end %>

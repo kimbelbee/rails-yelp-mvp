@@ -1,0 +1,16 @@
+<h1>This is the greek Fusion Restaurant <strong><%= @restaurant.name %> </strong></h1>
+<h2><%= @restaurant.address %></h2>
+<p><%= @restaurant.category %></p>
+
+<h2>Leave us a review</h2>
+<%= link_to 'Here', new_restaurant_review_path(@restaurant) %>
+
+<ul>
+  <% @restaurant.reviews.each do |rev| %>
+    <li> <%= rev.content %> - <%= rev.rating %></li>
+  <% end %>
+</ul>
+
+
+
+<%= link_to "All Restaurants", restaurants_path %>
